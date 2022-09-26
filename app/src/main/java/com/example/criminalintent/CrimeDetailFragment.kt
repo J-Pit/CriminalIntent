@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.example.criminalintent.databinding.FragmentCrimeDetailBinding
 import java.util.*
 private lateinit var crime: Crime
+
 class CrimeDetailFragment: Fragment() {
+    private lateinit var crimeRecyclerView: RecyclerView
     private var _binding: FragmentCrimeDetailBinding? = null
     private val binding
         get() = checkNotNull(_binding) {
